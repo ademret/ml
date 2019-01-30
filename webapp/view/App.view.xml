@@ -1,0 +1,17 @@
+<mvc:View controllerName="sap.ui.demo.db.controller.App" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+	<Panel headerText="{i18n>panelHeaderText}" class="sapUiResponsiveMargin" width="auto">
+		<content>
+			<Select id="multilanguageSelect" selectedKey="{i18n>locale}" change="onLanguageSelect">
+				<core:Item key="de_DE" text="DE"/>
+				<core:Item key="du_DU" text="NL"/>
+				<core:Item key="en_EN" text="EN"/>
+				<core:Item key="tr_TR" text="TR"/>
+			</Select>
+			<Label text="{i18n>firstName}" class="sapUiSmallMargin"/>
+			<Input value="{/firstName}" valueLiveUpdate="true" width="200px" enabled="{/enabled}"/>
+			<Label text="{i18n>lastName}" class="sapUiSmallMargin"/>
+			<Input value="{/lastName}" valueLiveUpdate="true" width="200px" enabled="{/enabled}"/>
+			<CheckBox selected="{/enabled}" text="{i18n>enabled}"/>
+		</content>
+	</Panel>
+</mvc:View>
